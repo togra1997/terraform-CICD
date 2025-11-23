@@ -42,3 +42,4 @@ jobs:
         TEMPLATE_ID: ${{ vars.TEMPLATE_ID }}
         NETWORK_BRIDGE: ${{ vars.NETWORK_BRIDGE }}
         VM_GW: ${{ vars.VM_GW }}
+        ALLOW_ORIGINS: ${{ vars.ALLOW_ORIGINS }}
