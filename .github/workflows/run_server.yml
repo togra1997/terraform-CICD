@@ -31,8 +31,9 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    - name: run server
-      run: docker compose up -d
+    - name: Run server
+      run: |
+        docker compose up --build -d
       env:
         PROXMOX_URL: ${{ secrets.PROXMOX_URL }}
         API_TOKEN_ID: ${{ secrets.API_TOKEN_ID }}
