@@ -19,7 +19,7 @@ services:
       - VM_GW=$VM_GW
       - ALLOW_ORIGINS=$ALLOW_ORIGINS
 
-  terraform-UI:
+  terraform-ui:
     build:
       context: ./terraform-UI
       dockerfile: node:latest
