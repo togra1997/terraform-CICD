@@ -23,9 +23,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_UI
-    volumes:
-      - ./terraform-UI:/app
     working_dir: /app/terraform-UI/terraform-UI
-    command: npm install && npm run dev
+    command: npm run dev
     ports:
       - 5713:5713
