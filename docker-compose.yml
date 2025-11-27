@@ -1,8 +1,8 @@
 services:
-  app:
+  terraform-api:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_api
     volumes:
       - ./terraform-api:/app
     working_dir: /app
@@ -18,3 +18,14 @@ services:
       - NETWORK_BRIDGE=$NETWORK_BRIDGE
       - VM_GW=$VM_GW
       - ALLOW_ORIGINS=$ALLOW_ORIGINS
+
+  terraform-UI:
+    build:
+      context: ./terraform-UI
+      dockerfile: node:latest
+    volumes:
+      - ./terraform-UI:/app
+    working_dir: /app/terraform-UI
+    command: npm run dev
+    ports:
+      - 5713:5713
