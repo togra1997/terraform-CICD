@@ -1,5 +1,4 @@
 FROM node:latest
-COPY ./terraform-UI /app
 WORKDIR /app/terraform-UI/terraform-UI
 
 RUN npm install
