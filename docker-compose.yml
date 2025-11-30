@@ -21,11 +21,9 @@ services:
 
   terraform-ui:
     build:
-      context: ./terraform-UI
-      dockerfile: node:latest
-    volumes:
-      - ./terraform-UI:/app
-    working_dir: /app/terraform-UI
+      context: .
+      dockerfile: Dockerfile_UI
+    working_dir: /app/terraform-UI/terraform-UI
     command: npm run dev
     ports:
-      - 5713:5713
+      - 5173:5173
