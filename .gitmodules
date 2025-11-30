@@ -1,6 +1,0 @@
-[submodule "terraform-api"]
-	path = terraform-api
-	url = https://github.com/togra1997/terraform-api.git
-[submodule "terraform-UI"]
-	path = terraform-UI
-	url = https://github.com/togra1997/terraform-UI.git
